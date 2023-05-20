@@ -13,12 +13,21 @@ const DocsUI = () => {
                <div className="border-black border">
                   <img src={logo} alt="docs-logo" className="w-10 mt-3 ml-4"/>
                </div>
-               <div className="border-black border ml-3">
-                  <div className="flex border-black border">
-                    <input type="text" value="Untitled document" className="doc-name"/>
-                    <img src={star} className="w-4 h-4" alt="star icon"/>
-                    <img src={send} className="w-4 h-4" alt="move-folder icon"/>
-                    <img src={check} className="w-4 h-4" alt="status docs"/>
+               <div className="border-black border">
+                  <div className="flex border-black border mt-2">
+                    <div>
+                      <input type="text" value="Untitled document" className="doc-name w-40 pl-2 h-15 place-items-center grid"/>
+                      <div className="rename bg-black color text-slate-100 ml-14 mt-2 p-1 text-xs rounded place-items-center grid opacity-0">Rename</div>
+                    </div>
+                    <div className="ml-6">
+                     
+                       <img src={star} className="star-fav w-6 h-4 mt-1 ml-5" alt="star icon"/>
+               
+                       <div className="star  bg-black color text-slate-100 ml-2.5 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid opacity-0">Star</div>
+                    </div>
+                    
+                    <img src={send} className="w-4 h-4 ml-4 mt-1" alt="move-folder icon"/>
+                    <img src={check} className="w-4 h-4 mt-1 ml-4" alt="status docs"/>
                     </div>
                   <div className="flex border-black border">
                     <div>File</div>

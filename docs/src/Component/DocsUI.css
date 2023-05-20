@@ -10,12 +10,50 @@
 .doc-name{
     font-size: 18px;
     font-variant-ligatures: no-contextual;
-    height: 20px;
     line-height: 22px;
     color: rgb(92, 92, 92);
+    position: relative;
 }
 
-input :focus {
-    border: .5px solid black;
+.rename {
+    position: absolute;
+}
+
+.star {
+    position: absolute;
+ 
+}
+
+.star-fav {
+    position: relative;
+    margin-left: -5%;
     
+}
+
+.star-fav:hover {
+    background-color:  #d7d9db;
+    border-radius: 70%;
+    cursor: pointer;
+    border: 1px solid black;
+
+    width: 30px;
+    height: 30px;
+}
+
+.star-fav:hover + .star {
+  opacity: 1;
+}
+
+input[type="text"].doc-name:hover {
+    border: .2px solid rgb(92, 92, 92);
+   
+    border-radius: 5px;
+}
+
+input[type="text"].doc-name:hover + .rename {
+    opacity: 1;
+}
+
+#doc-name[input]:active {
+    border: 2px solid blue
 }
