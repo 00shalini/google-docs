@@ -60,6 +60,35 @@
    margin-left: -9px;
 }
 
+.history-div {
+    background-color:  #e2e4e5;
+    width: 110%;
+    height: 60%;
+    align-items: center;
+    border-radius: 50%;
+     opacity: 0;
+     margin-top: 12px;
+     visibility:hidden;
+   margin-left: -9px;
+}
+.message-div {
+    background-color:  #e2e4e5;
+    width: 110%;
+    height: 60%;
+    align-items: center;
+    border-radius: 50%;
+     opacity: 0;
+     margin-top: 13px;
+     visibility:hidden;
+   margin-left: 13px;
+}
+.history {
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 13px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);
+}
 .star {
     visibility: hidden;
     opacity: 0;
@@ -82,11 +111,19 @@
   transition: opacity 0.3s, visibility 0.3s;
   transform: translateX(-50%); 
 }
-.star-cont , .send-cont, .check-cont{
+.message {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 28px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+.star-cont , .send-cont, .check-cont, .history-cont, .message-cont{
     position: relative;
   display: inline-block;
+  border:1px solid black;
 }
-.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div {
+.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div, .history-cont:hover .history, .history-cont:hover .history-div,.message-cont:hover .message, .message-cont:hover .message-div {
     opacity: 1;
     cursor: pointer;
     visibility: visible;

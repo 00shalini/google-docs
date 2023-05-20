@@ -5,6 +5,10 @@ import logo from "../assets/images/docs-logo.jpg";
 import star from "../assets/images/star.png";
 import send from "../assets/images/send.png";
 import check from "../assets/images/check.png";
+import history from "../assets/images/history.png";
+import videorecord from "../assets/images/video-record.png";
+import message from "../assets/images/message.png";
+import downarrow from '../assets/images/downward-arrow.png';
 
 const DocsUI = () => {
   return (
@@ -61,43 +65,81 @@ const DocsUI = () => {
           </div>
           <div className="tool-bar-cont flex border-black border w-full justify-around">
             <div className="tool-bar-cont1 relative inline-block">
-              <div className="tool-bar1 text-[#202124] tracking-wide cursor-pointer">File</div>
+              <div className="tool-bar1 text-[#202124] tracking-wide cursor-pointer">
+                File
+              </div>
               <div className="tool-back1"></div>
             </div>
             <div className="tool-bar-cont2 relative inline-block">
-              <div className="tool-bar2 text-[#202124] tracking-wide cursor-pointer">Edit</div>
+              <div className="tool-bar2 text-[#202124] tracking-wide cursor-pointer">
+                Edit
+              </div>
               <div className="tool-back2"></div>
             </div>
             <div className="tool-bar-cont3 relative inline-block">
-              <div className="tool-bar3 text-[#202124] tracking-wide cursor-pointer">View</div>
+              <div className="tool-bar3 text-[#202124] tracking-wide cursor-pointer">
+                View
+              </div>
               <div className="tool-back3"></div>
             </div>
             <div className="tool-bar-cont4 relative inline-block">
-              <div className="tool-bar4 text-[#202124] tracking-wide cursor-pointer">Insert</div>
+              <div className="tool-bar4 text-[#202124] tracking-wide cursor-pointer">
+                Insert
+              </div>
               <div className="tool-back4"></div>
             </div>
             <div className="tool-bar-cont5 relative inline-block">
-              <div className="tool-bar5 text-[#202124] tracking-wide cursor-pointer">Format</div>
+              <div className="tool-bar5 text-[#202124] tracking-wide cursor-pointer">
+                Format
+              </div>
               <div className="tool-back5"></div>
             </div>
             <div className="tool-bar-cont6 relative inline-block">
-              <div className="tool-bar6 text-[#202124] tracking-wide cursor-pointer">Tools</div>
+              <div className="tool-bar6 text-[#202124] tracking-wide cursor-pointer">
+                Tools
+              </div>
               <div className="tool-back6"></div>
             </div>
             <div className="tool-bar-cont7 relative inline-block">
-              <div className="tool-bar7 text-[#202124] tracking-wide cursor-pointer">Extensions</div>
+              <div className="tool-bar7 text-[#202124] tracking-wide cursor-pointer">
+                Extensions
+              </div>
               <div className="tool-back7"></div>
             </div>
             <div className="tool-bar-cont8 relative inline-block">
-              <div className="tool-bar8 text-[#202124] tracking-wide cursor-pointer">Help</div>
+              <div className="tool-bar8 text-[#202124] tracking-wide cursor-pointer">
+                Help
+              </div>
               <div className="tool-back8"></div>
             </div>
           </div>
         </div>
-        <div className="border-black">
-
+        <div className="border-black border w-96 ml-80 flex">
+          <div className="history-cont w-10">
+            <img src={history} alt="history" className="absolute w-6 mt-5" />
+            <div className="history-div"></div>
+            <div className="history w-48 bg-black color h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+              Last edit was 24 minutes ago
+            </div>
+          </div>
+          <div className="message-cont w-10">
+            <img src={message} alt="message" className="absolute w-7 mt-5 ml-5" />
+            <div className="message-div"></div>
+            <div className="message  bg-black color w-64 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+              Open comment history (Ctrl+Alt+Shift+A)
+            </div>
+          </div>
+          <div>
+            <img src={videorecord} alt="videorecord" className="absolute w-7 mt-5 ml-5" />
+            <img src={downarrow} alt="downarrow" className="absolute w-7 mt-5 ml-5" />
+            <div className="video-div"></div>
+            <div className="video  bg-black color w-64 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Join a call here or present this tab to the call
+            </div>
+          </div>
+          <div></div>
+          <div></div>
         </div>
-        
       </div>
       <div className="">hello</div>
     </div>
