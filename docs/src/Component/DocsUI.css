@@ -18,31 +18,80 @@
 .rename {
     position: absolute;
 }
+.send-img {
+    margin-left: -3px;
+}
+
+.check-img {
+    margin-left: -3px;
+}
+.star-div {
+    background-color:  #e2e4e5;
+    width: 60%;
+    height: 95%;
+    align-items: center;
+    border-radius: 50%;
+     opacity: 0;
+     margin-top: -2px;
+     visibility:hidden;
+}
+
+.send-div {
+    background-color:  #e2e4e5;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    border-radius: 50%;
+     opacity: 0;
+     margin-top: -2px;
+     visibility:hidden;
+   margin-left: -9px;
+}
+
+.check-div {
+    background-color:  #e2e4e5;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    border-radius: 50%;
+     opacity: 0;
+     margin-top: -2px;
+     visibility:hidden;
+   margin-left: -9px;
+}
 
 .star {
-    position: absolute;
- 
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 13px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);
 }
 
-.star-fav {
+.send {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 2px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);
+}
+.check {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 11px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+.star-cont , .send-cont, .check-cont{
     position: relative;
-    margin-left: -5%;
-    
+  display: inline-block;
 }
-
-.star-fav:hover {
-    background-color:  #d7d9db;
-    border-radius: 70%;
+.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div {
+    opacity: 1;
     cursor: pointer;
-    border: 1px solid black;
-
-    width: 30px;
-    height: 30px;
+    visibility: visible;
 }
 
-.star-fav:hover + .star {
-  opacity: 1;
-}
 
 input[type="text"].doc-name:hover {
     border: .2px solid rgb(92, 92, 92);
@@ -56,4 +105,54 @@ input[type="text"].doc-name:hover + .rename {
 
 #doc-name[input]:active {
     border: 2px solid blue
+}
+
+.tool-back1, .tool-back2,.tool-back3 ,.tool-back4,.tool-back5,.tool-back6, .tool-back7,.tool-back8   {
+
+    padding: 13px 19px;
+    border-radius: 3px;
+    background-color: #e2e4e5;
+    margin-left: -8px;
+    margin-top: -23px;
+    visibility: hidden;
+    opacity: 0;
+}
+.tool-back2 {
+    margin-left: -9px;
+    padding: 13px 21px;
+    margin-top: -23px;
+}
+.tool-back3 {
+    margin-left: -5px;
+    padding: 13px 21px;
+    margin-top: -23px;
+}
+.tool-back4 {
+    margin-left: -3.5px;
+    padding: 13px 21px;
+    margin-top: -23px;
+}
+.tool-back5 {
+    margin-left: -3px;
+    margin-top: -23px;
+    padding: 13px 25px;
+}
+.tool-back6 {
+    margin-left: -6px;
+    padding: 13px 22px;
+    margin-top: -23px;
+}
+.tool-back7 {
+    margin-left: -5px;
+    padding: 13px 38px;
+    margin-top: -23px;
+}
+.tool-back8 {
+    margin-left: -5px;
+}
+.tool-bar-cont1:hover .tool-back1,.tool-bar-cont2:hover .tool-back2, .tool-bar-cont3:hover .tool-back3, .tool-bar-cont4:hover .tool-back4, .tool-bar-cont5:hover .tool-back5 ,.tool-bar-cont6:hover .tool-back6, .tool-bar-cont7:hover .tool-back7, .tool-bar-cont8:hover .tool-back8{
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+
 }
