@@ -14,7 +14,9 @@
     color: rgb(92, 92, 92);
     position: relative;
 }
-
+body {
+    overflow-x: hidden;
+}
 .rename {
     position: absolute;
 }
@@ -82,6 +84,38 @@
      visibility:hidden;
    margin-left: 13px;
 }
+.video-div {
+    background-color:  #e2e4e5;
+    width: 80%;
+    height: 60%;
+    align-items: center;
+    border-radius:20px;
+     opacity: 0;
+     margin-top: 13px;
+     visibility:hidden;
+   margin-left: 26px;
+}
+.share-div{
+    background-color:  #c2e7ff;
+    width: 80%;
+    height: 65%;
+    align-items: center;
+    border-radius:20px;
+    
+     margin-top: -30px;
+   margin-left: 25px;
+}
+.profile-div {
+    background-color:  #e2e4e5;
+    width: 61%;
+    height: 60%;
+    align-items: center;
+    border-radius:20px;
+     opacity: 0;
+     margin-top: 16px;
+     visibility:visible;
+   margin-left: 24.5px;
+}
 .history {
     visibility: hidden;
     opacity: 0;
@@ -118,18 +152,51 @@
   transition: opacity 0.3s, visibility 0.3s;
   transform: translateX(-50%); 
 }
-.star-cont , .send-cont, .check-cont, .history-cont, .message-cont{
+.video {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 65px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+.share {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 75px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+.profile {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: -20px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+.star-cont , .send-cont, .check-cont, .history-cont, .message-cont, .video-cont,.share-cont, .profile-cont{
     position: relative;
   display: inline-block;
   border:1px solid black;
+  cursor: pointer;
 }
-.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div, .history-cont:hover .history, .history-cont:hover .history-div,.message-cont:hover .message, .message-cont:hover .message-div {
+.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div, .history-cont:hover .history, .history-cont:hover .history-div,.message-cont:hover .message, .message-cont:hover .message-div, .video-cont:hover .video , .video-cont:hover .video-div ,.share-cont:hover .share, .profile-cont:hover .profile-div {
     opacity: 1;
     cursor: pointer;
     visibility: visible;
 }
-
-
+.profile-cont:hover .profile{
+    opacity: 1;
+    cursor: pointer;
+    visibility: visible;
+}
+.share-cont:hover .share-div {
+    
+    cursor: pointer;
+    box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
+    background-color:  #93b8d0;
+}
 input[type="text"].doc-name:hover {
     border: .2px solid rgb(92, 92, 92);
    
