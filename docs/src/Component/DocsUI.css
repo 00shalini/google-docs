@@ -116,6 +116,106 @@ body {
      visibility:visible;
    margin-left: 24.5px;
 }
+.undo-div {
+    background-color:  #e2e4e5;
+    width: 30px;
+    height: 26px;
+    border-radius:5px;
+    margin-top:6.5px;
+    margin-left: 2px;
+    opacity: 0;
+    visibility: hidden;
+}
+.redo-div {
+    background-color:  #e2e4e5;
+    width: 30px;
+    height: 26px;
+    border-radius:5px;
+    margin-top:6.5px;
+    margin-left: 2px;
+    opacity: 0;
+    visibility: hidden;
+}
+.printer-div {
+    background-color:  #e2e4e5;
+    width: 30px;
+    height: 26px;
+    border-radius:5px;
+    margin-top:6.5px;
+    margin-left: 2px;
+    opacity: 0;
+    visibility: hidden;
+}
+.spell-div {
+    background-color:  #e2e4e5;
+    width: 30px;
+    height: 26px;
+    border-radius:5px;
+    margin-top:6.5px;
+    margin-left: 2px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.format-div {
+    background-color:  #e2e4e5;
+    width: 30px;
+    height: 26px;
+    border-radius:5px;
+    margin-top:6.5px;
+    margin-left: 2px;
+    opacity: 0;
+    visibility: hidden;
+}
+.zoom-div {
+    background-color:  #e2e4e5;
+    width: 65px;
+    height: 26px;
+    border-radius:5px;
+    margin-top:-24px;
+    margin-left: 1px;
+    opacity: 0;
+    visibility: hidden;
+}
+.zoom-100 {
+    margin-top: 10px;
+    color: rgb(92, 92, 92);
+    font-family: Google Sans,Roboto,sans-serif!important;
+    font-variant-ligatures: no-contextual;
+    margin-left: 7px;
+}
+.styles-div {
+    background-color:  #e2e4e5;
+    width: 105px;
+    height: 32px;
+    border-radius:5px;
+    margin-top:-27px;
+    margin-left: 3px;
+    opacity: 0;
+    visibility: hidden;
+}
+.font-div {
+    background-color:  #e2e4e5;
+    width: 110px;
+    height: 32px;
+    border-radius:5px;
+    margin-top:-27px;
+    opacity: 0;
+    visibility: hidden;
+}
+.dec-div {
+    background-color:  #e2e4e5;
+    width: 25px;
+    height: 28px;
+    border-radius:5px;
+    margin-top:4px;
+    opacity: 0;
+    visibility: hidden;
+}
+.font-inp {
+    margin-top: 9px;
+    margin-left: px;
+}
 .history {
     visibility: hidden;
     opacity: 0;
@@ -173,13 +273,126 @@ body {
   transition: opacity 0.3s, visibility 0.3s;
   transform: translateX(-50%); 
 }
-.star-cont , .send-cont, .check-cont, .history-cont, .message-cont, .video-cont,.share-cont, .profile-cont{
+.undo {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 13px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);  
+}
+.redo {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 13px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);  
+}
+.printer {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 13px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+.spell {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 13px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);  
+}
+.format {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 15px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+.zoom {
+    visibility:hidden;
+    opacity: 0;
+    margin-left:35px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+  
+}
+.styles {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 50px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);  
+}
+.styles-txt {
+    color: rgb(92, 92, 92);
+    font-family: Google Sans,Roboto,sans-serif!important;
+    font-variant-ligatures: no-contextual;
+}
+.font {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 52px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);  
+}
+.font-txt {
+    margin-left: 19px;
+    color: rgb(92, 92, 92);
+    font-family: Google Sans,Roboto,sans-serif!important;
+    font-variant-ligatures: no-contextual;
+}
+
+.dec {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 9px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+
+.dec-txt {
+    margin-left: -80px;
+    color: rgb(92, 92, 92);
+    font-family: Google Sans,Roboto,sans-serif!important;
+    font-variant-ligatures: no-contextual;
+}
+
+.font-tool {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 15px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%); 
+}
+.star-cont , .send-cont, .check-cont, .history-cont, .message-cont, .video-cont,.share-cont, .profile-cont, .undo-cont, .redo-cont, .printer-cont, .spell-cont, .format-cont{
     position: relative;
   display: inline-block;
   border:1px solid black;
   cursor: pointer;
 }
-.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div, .history-cont:hover .history, .history-cont:hover .history-div,.message-cont:hover .message, .message-cont:hover .message-div, .video-cont:hover .video , .video-cont:hover .video-div ,.share-cont:hover .share, .profile-cont:hover .profile-div {
+.zoom-cont, .styles-cont, .dec-cont  {
+    cursor: pointer;
+    border:1px solid black;
+}
+.zoom-cont {
+        margin-left: 180px;
+        margin-top: -66.5px;
+}
+.font-cont {
+    margin-left: -113px;
+       
+    border: 1px solid blue;
+}
+.font-inp-cont {
+    margin-top: -40px;
+    margin-left: -66px;
+    border: 1px solid black;
+}
+.dec-cont {
+    margin-left: -95px;
+    border: 1px solid blue;
+}
+.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div, .history-cont:hover .history, .history-cont:hover .history-div,.message-cont:hover .message, .message-cont:hover .message-div, .video-cont:hover .video , .video-cont:hover .video-div ,.share-cont:hover .share, .profile-cont:hover .profile-div, .undo-cont:hover .undo, .undo-cont:hover .undo-div, .redo-cont:hover .redo , .redo-cont:hover .redo-div , .printer-cont:hover .printer, .printer-cont:hover .printer-div , .spell-cont:hover .spell, .spell-cont:hover .spell-div , .format-cont:hover .format ,.format-cont:hover .format-div, .zoom-cont:hover .zoom, .zoom-cont:hover .zoom-div , .styles-cont:hover .styles , .styles-cont:hover .styles-div , .font-cont:hover .font ,.font-cont:hover .font-div, .dec-cont:hover .dec, .dec-cont:hover .dec-div,.font-inp-cont:hover .font-tool{
     opacity: 1;
     cursor: pointer;
     visibility: visible;

@@ -9,16 +9,29 @@ import history from "../assets/images/history.png";
 import videorecord from "../assets/images/video-record.png";
 import message from "../assets/images/message.png";
 import downarrow from "../assets/images/downward-arrow.png";
-import padlock from '../assets/images/padlock.png';
-import profile from '../assets/images/profile-user.png';
+import padlock from "../assets/images/padlock.png";
+import profile from "../assets/images/profile-user.png";
+import undo from "../assets/images/undo.png";
+import redo from "../assets/images/redo.png";
+import printer from "../assets/images/printer.png";
+import spellcheck from "../assets/images/spell-check.png";
+import paintroller from "../assets/images/paint-roller.png";
+import underline from "../assets/images/underline.png";
+import bold from "../assets/images/bold-text.png";
+import italic from "../assets/images/italic-font.png";
+import pencil from "../assets/images/pencil.png";
+import minus from '../assets/images/minus-sign.png';
 
 const DocsUI = () => {
   return (
     <div className="w-full">
       <div className="header flex">
         <div className="border-black border">
-          <img src={logo} alt="docs-logo" className="home-cont w-10 mt-3 ml-4" />
-          
+          <img
+            src={logo}
+            alt="docs-logo"
+            className="home-cont w-10 mt-3 ml-4"
+          />
         </div>
         <div className="border-black border" style={{ width: "450px" }}>
           <div className="flex border-black border mt-2">
@@ -158,7 +171,9 @@ const DocsUI = () => {
               alt="padlock"
               className="absolute w-5 mt-6 ml-10 "
             />
-            <p className="text-[#001d35] font-semibold mt-6 ml-16 text-sm">Share</p>
+            <p className="text-[#001d35] font-semibold mt-6 ml-16 text-sm">
+              Share
+            </p>
             <div className="share-div"></div>
             <div className="share  bg-black color w-32 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
               Private to only me
@@ -166,27 +181,165 @@ const DocsUI = () => {
           </div>
           <div className="profile-cont w-16">
             <img
-                src={profile}
-                alt="profile"
-                className="absolute w-8 mt-5 ml-7 "
-              />
-              <div className="profile-div"></div>
-              <div className="profile  bg-gray-400 color w-48 h-13 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded grid">
-                <p className="font-bold">Google Account</p> 
-                <p className="font-bold text-gray-600">Shalini Sharma</p>
-                <p className="font-bold text-gray-600">shalini07061997@gmail.com</p>
-              </div>
+              src={profile}
+              alt="profile"
+              className="absolute w-8 mt-5 ml-7 "
+            />
+            <div className="profile-div"></div>
+            <div className="profile  bg-gray-400 color w-48 h-13 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded grid">
+              <p className="font-bold">Google Account</p>
+              <p className="font-bold text-gray-600">Shalini Sharma</p>
+              <p className="font-bold text-gray-600">
+                shalini07061997@gmail.com
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <div className="h-14 border-black w-full border">
-        <div className="h-10 rounded-3xl bg-[#edf2fa] border mx-auto mt-2" style={{width:'97%'}}>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
+        <div
+          className="h-10 rounded-3xl bg-[#edf2fa] border mx-auto mt-2 flex"
+          style={{ width: "97%" }}
+        >
+          <div className="w-64 ml-3 border-black border h-10">
+            <div className="undo-cont w-9 h-10">
+              <img
+                src={undo}
+                alt="undo"
+                className="absolute w-4 mt-2.5 ml-2 "
+              />
+              <div className="undo-div"></div>
+              <div className="undo  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Undo(Ctrl+Z)
+              </div>
+            </div>
+            <div className="redo-cont w-9">
+              <img
+                src={redo}
+                alt="redo"
+                className="absolute w-4 mt-2.5 ml-2 "
+              />
+              <div className="redo-div"></div>
+              <div className="redo  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Redo(Ctrl+Y)
+              </div>
+            </div>
+            <div className="printer-cont w-9">
+              <img
+                src={printer}
+                alt="printer"
+                className="absolute w-4 mt-3 ml-2.5 "
+              />
+              <div className="printer-div"></div>
+              <div className="printer  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Print(Ctrl+P)
+              </div>
+            </div>
+            <div className="spell-cont w-9">
+              <img
+                src={spellcheck}
+                alt="spellcheck"
+                className="absolute w-5 mt-2.5 ml-2.5 "
+              />
+              <div className="spell-div"></div>
+              <div className="spell  bg-black color w-60 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Spelling and grammer check(Ctrl+Alt+X)
+              </div>
+            </div>
+            <div className="format-cont w-9">
+              <img
+                src={paintroller}
+                alt="format"
+                className="absolute w-5 mt-2.5 ml-2 "
+              />
+              <div className="format-div"></div>
+              <div className="format  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Paint format
+              </div>
+            </div>
+            <div className="zoom-cont w-16 h-10">
+              <p className="zoom-100 ml-48 font-bold">100%</p>
+              <img
+                src={downarrow}
+                alt="downarrow"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "47px",
+                  marginTop: "-17px",
+                  color: "rgb(92, 92, 92)",
+                }}
+              />
+              <div className="zoom-div"></div>
+              <div className="zoom  bg-black color w-12 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Zoom
+              </div>
+            </div>
+          </div>
+          <div className="w-56 border-black border h-10">
+            <div className="styles-cont w-28 h-10 border">
+              <p className="styles-txt ml-2 mt-2.5 font-bold">Normal text</p>
+              <img
+                src={downarrow}
+                alt="downarrow"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "90px",
+                  marginTop: "-16px",
+                  color: "rgb(92, 92, 92)",
+                }}
+              />
+              <div className="styles-div"></div>
+              <div className="styles  bg-black color w-12 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Styles
+              </div>
+            </div>
+          </div>
+          <div className="w-24 border-black border h-10">
+            <div className="font-cont w-28 h-10 border">
+              <p className="font-txt mt-2.5 font-bold">Arial</p>
+              <img
+                src={downarrow}
+                alt="downarrow"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "80px",
+                  marginTop: "-16px",
+                  color: "rgb(92, 92, 92)",
+                }}
+              />
+              <div className="font-div"></div>
+              <div className="font  bg-black color w-12 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Font
+              </div>
+            </div>
+          </div>
+          <div className="w-32 border-black border h-10">
+            <div className="dec-cont w-6 h-10 border">
+              <img
+                src={minus}
+                alt="minus"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "5px",
+                  marginTop:'13px'
+                  
+                }}
+              />
+              <div className="dec-div"></div>
+              <div className="dec  bg-black color w-56 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Decrease font size(Ctrl+Shift+,)
+              </div>
+            </div>
+            <div className="font-inp-cont w-8 h-10">
+              <p value="10" className="w-8 font-inp border text-center border-slate-600 rounded-sm">10</p>
+              <div className="font-tool  bg-black color w-16 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Font size
+              </div>
+            </div>
+          </div>
+          <div className="w-24 border-black border h-10"></div>
+          <div className="w-72 border-black border h-10"></div>
+          <div className="w-12 border-black border h-10"></div>
         </div>
       </div>
     </div>
