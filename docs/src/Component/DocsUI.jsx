@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect,useRef} from "react";
 import "../index.css";
 import "./DocsUI.css";
 import logo from "../assets/images/docs-logo.jpg";
@@ -65,6 +65,12 @@ import graduation from '../assets/images/graduation.png';
 import frequency from '../assets/images/frequency.png';
 import warning from '../assets/images/warning.png';
 import keyboard from '../assets/images/keyboard.png';
+import google from '../assets/images/google.png';
+import sheets from '../assets/images/google-sheets.png';
+import slides from '../assets/images/slides.png';
+import forms from '../assets/images/google-forms.png';
+import settings from '../assets/images/settings.png';
+import drive from '../assets/images/google-drive (1).png';
 
 const DocsUI = () => {
 
@@ -168,15 +174,86 @@ const DocsUI = () => {
     }
     
   }
+
+  const [isOpen, setIsOpen] = useState(false);
+  const sidebarRef = useRef(null);
+
+  const toggleSidebar = () => {
+    
+    setIsOpen(true);
+    console.log(isOpen)
+  };
+
+  const handleOutsideClick = (event) => {
+   
+      setIsOpen(false);
+
+  };
+
+  
+
   return (
-    <div className="w-full">
+    <div>
+      <div className={` ${isOpen ? 'open' : 'close'} border-black w-72 bg-white fixed border`} style={{height:'600px'}}>
+        <div className="flex pt-5 w-full h-20 border-b-slate-300 border">
+            <div className="w-64 pl-8">
+              <div className="flex">
+                <img src={google} alt="google logo" className="w-20" style={{marginTop:'-25px'}}/>
+                <p className="ml-2 text-[#5F6368]" style={{fontSize:'25px',marginTop:'-5px'}}>Docs</p>
+              </div>
+              
+            </div>
+            <div>
+              <button onClick={handleOutsideClick} className=" w-8 h-8 mr-3 text-l text-white font-bold rounded-full bg-[#3c4043]" style={{marginTop:'-3px'}}>X</button>  
+            </div>
+        </div>
+        <div className="w-50 h-52 pl-8 pt-5 border-b-slate-300 border">
+           <div className="flex mb-4">
+             <img src={logo} className="w-7"/>
+             <p className="text-[#3c4043] font-bold text-sm ml-4 mt-1">Docs</p>
+           </div>
+           <div className="flex  mb-4">
+             <img src={sheets} className="w-7"/>
+             <p className="text-[#3c4043] font-bold text-sm ml-4 mt-1">Sheets</p>
+           </div>
+           <div className="flex  mb-4">
+             <img src={slides} className="w-7"/>
+             <p className="text-[#3c4043] font-bold text-sm ml-4 mt-1">Slides</p>
+           </div>
+           <div className="flex  mb-4">
+             <img src={forms} className="w-7"/>
+             <p className="text-[#3c4043] font-bold text-sm ml-4 mt-1">Forms</p>  
+           </div>
+        </div>
+        <div className="w-50 h-24 pl-8 pt-1.5 border-b-slate-300 border">
+           <div className="flex mb-4">
+             <img src={settings} className="w-9"/>
+             <p className="text-[#3c4043] font-bold text-sm ml-2 mt-2">Settings</p>
+           </div>
+           <div className="flex  mb-4">
+             <img src={question} className="w-6 ml-1"/>
+             <p className="text-[#3c4043] font-bold text-sm ml-4 mt-1">Help & feedback</p>
+           </div>
+        </div>
+        <div className="w-50 h-16 pl-8 pt-4 border-b-slate-300 border">
+            <div className="flex  mb-4">
+             <img src={drive} className="w-6 ml-1"/>
+             <p className="text-[#3c4043] font-bold text-sm ml-4 mt-1">Drive</p>
+           </div>
+        </div>
+        <p className="text-[#5f6368] font-extralight text-xs ml-20 hover:text-[#3c4043] mt-28">Privacy Policy  .  Terms of Service</p>
+      </div>
+      <div className="main w-full">
+      
       <div className="header flex">
-        <div className="">
+        <div onClick={toggleSidebar}>
           <img
             src={logo}
             alt="docs-logo"
             className="home-cont w-10 mt-3 ml-4"
+            onClick={toggleSidebar}
           />
+       
         </div>
         <div className="" style={{ width: "450px" }}>
           <div className="flex  mt-2">
@@ -994,7 +1071,10 @@ const DocsUI = () => {
            <textarea type="textarea" className="w-10/12 h-5/6 mt-14 ml-16 border-none outline-none" placeholder="Type @ to insert"></textarea>
         </div>
       </div>
+      
     </div>
+    </div>
+   
   );
 };
 

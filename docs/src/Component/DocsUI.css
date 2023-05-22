@@ -1,9 +1,10 @@
 .header {
     width: 100%;
-    top: 0;
     left: 0;
     min-height: 70px;
-
+}
+.main {
+    z-index: -1;
 }
 
 .doc-name{
@@ -769,4 +770,18 @@ input[type="text"].doc-name:hover + .rename {
 }
 .hide {
     display: none;
+}
+
+.open {
+    left: 0;
+    display: block;
+    z-index: 100;
+    transition: left 0.3s ease;
+    box-shadow: -2px 1px 5px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 1px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 1px 5px 1px rgba(0,0,0,0.75);
+}
+.close {
+    left: -288px;
+    transition: right 0.3s ease;
 }
