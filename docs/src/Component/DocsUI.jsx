@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../index.css";
 import "./DocsUI.css";
 import logo from "../assets/images/docs-logo.jpg";
@@ -30,8 +30,104 @@ import linespacing from '../assets/images/line-spacing.png';
 import listwithbullet from '../assets/images/list-with-bullets.png'
 import menu from '../assets/images/menu.png';
 import uparrow from '../assets/images/up-arrow.png';
+import folder from '../assets/images/folder.png';
+import document from '../assets/images/document.png';
+import copy from '../assets/images/copy.png';
+import adduser from '../assets/images/add-user.png';
+import email from '../assets/images/email.png';
+import download from '../assets/images/download.png';
+import edit from '../assets/images/edit.png';
+import googledrive from '../assets/images/google-drive.png';
 
 const DocsUI = () => {
+
+  const [fileDrop, setFileDrop] = useState(false);
+  const [editDrop ,setEditDrop] = useState(false);
+  const [viewDrop , setViewDrop] = useState(false);
+  const [insertDrop , setInsertDrop] = useState(false);
+  const [formatDrop , setFormatDrop] = useState(false);
+  const [toolDrop , setToolDrop] = useState(false);
+  const [extensionDrop, setExtensionDrop] = useState(false);
+  const [helpDrop , setHelpDrop] = useState(false);
+
+  const handleShowDropDown = (e) => {
+    e.preventDefault();
+    const id = e.target.id;
+    if (id === 'file-id'){
+      setFileDrop(!fileDrop);
+      setEditDrop(false);
+      setViewDrop(false);
+      setInsertDrop(false);
+      setFormatDrop(false);
+      setToolDrop(false);
+      setExtensionDrop(false);
+      setHelpDrop(false)
+    } else if (id === 'edit-id') {
+      setEditDrop(!editDrop);
+      setFileDrop(false);
+      setViewDrop(false);
+      setInsertDrop(false);
+      setFormatDrop(false);
+      setToolDrop(false);
+      setExtensionDrop(false);
+      setHelpDrop(false)
+    } else if (id === 'view-id') {
+      setViewDrop(!viewDrop);
+      setEditDrop(false);
+      setFileDrop(false);
+      setInsertDrop(false);
+      setFormatDrop(false);
+      setToolDrop(false);
+      setExtensionDrop(false);
+      setHelpDrop(false)
+    } else if (id === 'insert-id') {
+      setInsertDrop(!insertDrop);
+      setViewDrop(false);
+      setEditDrop(false);
+      setFileDrop(false);
+      setFormatDrop(false);
+      setToolDrop(false);
+      setExtensionDrop(false);
+      setHelpDrop(false)
+    }else if (id === 'format-id') {
+      setFormatDrop(!formatDrop);
+      setInsertDrop(false);
+      setViewDrop(false);
+      setEditDrop(false);
+      setFileDrop(false);
+      setToolDrop(false);
+      setExtensionDrop(false);
+      setHelpDrop(false)
+    }else if (id === 'tool-id') {
+      setToolDrop(!toolDrop);
+      setFormatDrop(false);
+      setInsertDrop(false);
+      setViewDrop(false);
+      setEditDrop(false);
+      setFileDrop(false);
+      setExtensionDrop(false);
+      setHelpDrop(false)
+    }else if (id === 'extension-id') {
+      setToolDrop(false);
+      setFormatDrop(false);
+      setInsertDrop(false);
+      setViewDrop(false);
+      setEditDrop(false);
+      setFileDrop(false);
+      setExtensionDrop(!extensionDrop);
+      setHelpDrop(false)
+    }else if (id === 'help-id') {
+      setHelpDrop(!helpDrop);
+      setToolDrop(false);
+      setFormatDrop(false);
+      setInsertDrop(false);
+      setViewDrop(false);
+      setEditDrop(false);
+      setFileDrop(false);
+      setExtensionDrop(false);
+    }
+    
+  }
   return (
     <div className="w-full">
       <div className="header flex">
@@ -47,8 +143,8 @@ const DocsUI = () => {
             <div>
               <input
                 type="text"
-                value="Untitled document"
-                className="doc-name w-40 pl-2 h-15 place-items-center grid"
+                placeholder="Untitled document"
+                className="doc-name w-40 pl-2 h-15 place-items-center grid rounded"
               />
               <div className="rename bg-black color text-slate-100 ml-14 mt-2 p-1 text-xs rounded place-items-center grid opacity-0">
                 Rename
@@ -89,53 +185,214 @@ const DocsUI = () => {
             </div>
           </div>
           <div className="tool-bar-cont flex border-black border w-full justify-around">
-            <div className="tool-bar-cont1 relative inline-block">
-              <div className="tool-bar1 text-[#202124] tracking-wide cursor-pointer">
+            <div className="tool-bar-cont1 relative inline-block" onClick={handleShowDropDown}>
+              <div className=" text-[#202124] tracking-wide cursor-pointer" id="file-id">
                 File
               </div>
               <div className="tool-back1"></div>
+              <div className={`border-black border w-80 bg-white z-50 h-56 overflow-y-scroll ${ fileDrop ? 'show': 'hide'}`}>
+                 <div className="border-black border w-full h-9 mt-2 flex div-hover">
+                    <img src={document} alt="new file" className="w-5 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">New</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={folder} alt="open file" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Open</p>
+                    <p className="ml-44 mt-2.5">Ctrl+O</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={copy} alt="copy file" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5"> Make a copy</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={adduser} alt="share user" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Share</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={email} alt="email" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Email</p></div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={download} alt="download" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Download</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={edit} alt="rename" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Rename</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={send} alt="move" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Move</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={googledrive} alt="google drive" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Add shortcut to drive</p>
+                 </div>
+              </div>
             </div>
-            <div className="tool-bar-cont2 relative inline-block">
-              <div className="tool-bar2 text-[#202124] tracking-wide cursor-pointer">
+            <div className="tool-bar-cont2 relative inline-block" onClick={handleShowDropDown}>
+              <div className="tool-bar2 text-[#202124] tracking-wide cursor-pointer" id="edit-id">
                 Edit
               </div>
               <div className="tool-back2"></div>
+              <div className={`border-black border w-80 bg-white z-50 h-72 overflow-y-scroll ${ editDrop ? 'show': 'hide'}`}>
+                 <div className="border-black border w-full h-9 mt-2 flex div-hover">
+                    <img src={undo} alt="undo" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Undo</p>
+                    <p className="ml-44 mt-2.5">Ctrl+Z</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={redo} alt="redo" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Redo</p>
+                    <p className="ml-44 mt-2.5">Ctrl+Y</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={copy} alt="copy file" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5"> Make a copy</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={adduser} alt="share user" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Share</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={email} alt="email" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Email</p></div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={download} alt="download" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Download</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={edit} alt="rename" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Rename</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={send} alt="move" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Move</p>
+                 </div>
+                 <div className="border-black border w-full h-9 flex div-hover">
+                    <img src={googledrive} alt="google drive" className="w-4 h-4 mt-2.5 ml-2"/>
+                    <p className="ml-3 mt-2.5">Add shortcut to drive</p>
+                 </div>
+              </div>
             </div>
-            <div className="tool-bar-cont3 relative inline-block">
-              <div className="tool-bar3 text-[#202124] tracking-wide cursor-pointer">
+            <div className="tool-bar-cont3 relative inline-block" onClick={handleShowDropDown}>
+              <div className="tool-bar3 text-[#202124] tracking-wide cursor-pointer" id="view-id">
                 View
               </div>
               <div className="tool-back3"></div>
+              <div className={`border-black border w-80 bg-white z-50 h-72 ${ viewDrop ? 'show': 'hide'}`}>
+                 <div className="border-black border w-full h-10">
+                   New
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Open
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Make a copy
+                 </div>
+                 <div className="border-black border w-full h-10">Share</div>
+                 <div className="border-black border w-full h-10">Email</div>
+                 <div className="border-black border w-full h-10">download</div>
+              </div>
             </div>
-            <div className="tool-bar-cont4 relative inline-block">
-              <div className="tool-bar4 text-[#202124] tracking-wide cursor-pointer">
+            <div className="tool-bar-cont4 relative inline-block" onClick={handleShowDropDown}>
+              <div className="tool-bar4 text-[#202124] tracking-wide cursor-pointer" id="insert-id">
                 Insert
               </div>
               <div className="tool-back4"></div>
+              <div className={`border-black border w-80 bg-white z-50 h-72 ${ insertDrop ? 'show': 'hide'}`}>
+                 <div className="border-black border w-full h-10">
+                   New
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Open
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Make a copy
+                 </div>
+                 <div className="border-black border w-full h-10">Share</div>
+                 <div className="border-black border w-full h-10">Email</div>
+                 <div className="border-black border w-full h-10">download</div>
+              </div>
             </div>
-            <div className="tool-bar-cont5 relative inline-block">
-              <div className="tool-bar5 text-[#202124] tracking-wide cursor-pointer">
+            <div className="tool-bar-cont5 relative inline-block" onClick={handleShowDropDown}> 
+              <div className="tool-bar5 text-[#202124] tracking-wide cursor-pointer" id="format-id">
                 Format
               </div>
               <div className="tool-back5"></div>
+              <div className={`border-black border w-80 bg-white z-50 h-72 ${ formatDrop ? 'show': 'hide'}`}>
+                 <div className="border-black border w-full h-10">
+                   New
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Open
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Make a copy
+                 </div>
+                 <div className="border-black border w-full h-10">Share</div>
+                 <div className="border-black border w-full h-10">Email</div>
+                 <div className="border-black border w-full h-10">download</div>
+              </div>
             </div>
-            <div className="tool-bar-cont6 relative inline-block">
-              <div className="tool-bar6 text-[#202124] tracking-wide cursor-pointer">
+            <div className="tool-bar-cont6 relative inline-block" onClick={handleShowDropDown}>
+              <div className="tool-bar6 text-[#202124] tracking-wide cursor-pointer" id="tool-id">
                 Tools
               </div>
               <div className="tool-back6"></div>
+              <div className={`border-black border w-80 bg-white z-50 h-72 ${ toolDrop ? 'show': 'hide'}`}>
+                 <div className="border-black border w-full h-10">
+                   New
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Open
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Make a copy
+                 </div>
+                 <div className="border-black border w-full h-10">Share</div>
+                 <div className="border-black border w-full h-10">Email</div>
+                 <div className="border-black border w-full h-10">download</div>
+              </div>
             </div>
-            <div className="tool-bar-cont7 relative inline-block">
-              <div className="tool-bar7 text-[#202124] tracking-wide cursor-pointer">
+            <div className="tool-bar-cont7 relative inline-block" onClick={handleShowDropDown}>
+              <div className="tool-bar7 text-[#202124] tracking-wide cursor-pointer" id="extension-id">
                 Extensions
               </div>
               <div className="tool-back7"></div>
+              <div className={`border-black border w-80 bg-white z-50 h-72 ${ extensionDrop ? 'show': 'hide'}`}>
+                 <div className="border-black border w-full h-10">
+                   New
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Open
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Make a copy
+                 </div>
+                 <div className="border-black border w-full h-10">Share</div>
+                 <div className="border-black border w-full h-10">Email</div>
+                 <div className="border-black border w-full h-10">download</div>
+              </div>
             </div>
-            <div className="tool-bar-cont8 relative inline-block">
-              <div className="tool-bar8 text-[#202124] tracking-wide cursor-pointer">
+            <div className="tool-bar-cont8 relative inline-block" onClick={handleShowDropDown}>
+              <div className="tool-bar8 text-[#202124] tracking-wide cursor-pointer" id="help-id">
                 Help
               </div>
               <div className="tool-back8"></div>
+              <div className={`border-black border w-80 bg-white z-50 h-72 ${ helpDrop ? 'show': 'hide'}`}>
+                 <div className="border-black border w-full h-10">
+                   New
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Open
+                 </div>
+                 <div className="border-black border w-full h-10">
+                   Make a copy
+                 </div>
+                 <div className="border-black border w-full h-10">Share</div>
+                 <div className="border-black border w-full h-10">Email</div>
+                 <div className="border-black border w-full h-10">download</div>
+              </div>
             </div>
           </div>
         </div>
@@ -587,10 +844,10 @@ const DocsUI = () => {
         <div className="list-with-bullet-cont h-10 w-5 border-black border">
           <img src={listwithbullet} alt="list with bullet" className="w-5"/>
           <div className="list-with-bullet-div"></div>
-          <div className="list-with-bullet bg-black color w-44 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid"></div>
+          <div className="list-with-bullet bg-black color w-36 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">Show document outline</div>
         </div>
-        <div className="w-8/12 border-black border ml-44" style={{height:"600px"}}>
-           <input type="textarea" className="w-full h-7"/>
+        <div className="w-8/12 border-black border ml-44 bg-white" style={{height:"700px"}}>
+           <textarea type="textarea" className="w-10/12 h-5/6 mt-14 ml-16 border-none outline-none" placeholder="Type @ to insert"></textarea>
         </div>
       </div>
     </div>

@@ -14,6 +14,10 @@
     color: rgb(92, 92, 92);
     position: relative;
 }
+.doc-name:focus {
+    
+    outline: 2px solid #1a73e8;
+}
 body {
     overflow-x: hidden;
 }
@@ -338,6 +342,17 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+.list-with-bullet-div {
+    background-color:  #e2e4e5;
+    width: 35px;
+    height: 35px;
+    border-radius:50%;
+    margin-top:-27px;
+    margin-left: -8px;
+    opacity: 0;
+    visibility: hidden;
+}
+
 .font-inp {
     margin-top: 9px;
     color: rgb(92, 92, 92);
@@ -600,6 +615,13 @@ body {
   transition: opacity 0.3s, visibility 0.3s;
   transform: translateX(-50%);  
 }
+.list-with-bullet {
+    visibility:hidden;
+    opacity: 0;
+    margin-left: 50px;
+  transition: opacity 0.3s, visibility 0.3s;
+  transform: translateX(-50%);  
+}
 .star-cont , .send-cont, .check-cont, .history-cont, .message-cont, .video-cont,.share-cont, .profile-cont, .undo-cont, .redo-cont, .printer-cont, .spell-cont, .format-cont{
     position: relative;
   display: inline-block;
@@ -633,10 +655,13 @@ body {
     margin-top: -41px;
     margin-left: -30px;
 }
+.div-hover:hover {
+    background-color:#e2e4e5 ;
+}
 .bold-cont,.italic-cont,.underline-cont,.text-color-cont, .highlighter-cont, .insert-cont ,.comment-cont ,.picture-cont ,.align-cont ,.line-space-cont, .menu-cont, .edit-cont ,.uparrow-cont{
     border: 1px solid black;
 }
-.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div, .history-cont:hover .history, .history-cont:hover .history-div,.message-cont:hover .message, .message-cont:hover .message-div, .video-cont:hover .video , .video-cont:hover .video-div ,.share-cont:hover .share, .profile-cont:hover .profile-div, .undo-cont:hover .undo, .undo-cont:hover .undo-div, .redo-cont:hover .redo , .redo-cont:hover .redo-div , .printer-cont:hover .printer, .printer-cont:hover .printer-div , .spell-cont:hover .spell, .spell-cont:hover .spell-div , .format-cont:hover .format ,.format-cont:hover .format-div, .zoom-cont:hover .zoom, .zoom-cont:hover .zoom-div , .styles-cont:hover .styles , .styles-cont:hover .styles-div , .font-cont:hover .font ,.font-cont:hover .font-div, .dec-cont:hover .dec, .dec-cont:hover .dec-div,.font-inp-cont:hover .font-tool, .inc-cont:hover .inc , .inc-cont:hover .inc-div ,.bold-cont:hover .bold ,.bold-cont:hover .bold-div ,.italic-cont:hover .Italic ,.italic-cont:hover .italic-div, .underline-cont:hover .Underline , .underline-cont:hover .underline-div ,.text-color-cont:hover .text-color, .text-color-cont:hover .text-color-div, .highlighter-cont:hover .highlighter-div ,.highlighter-cont:hover .highlighter, .insert-cont:hover .insert ,.insert-cont:hover .insert-div , .comment-cont:hover .comment , .comment-cont:hover .comment-div ,.picture-cont:hover .picture ,.picture-cont:hover .picture-div ,.align-cont:hover .align, .align-cont:hover .align-div ,.line-space-cont:hover .line-space ,.line-space-cont:hover .line-space-div ,.menu-cont:hover .menu ,.menu-cont:hover .menu-div ,.edit-cont:hover .edit ,.edit-cont:hover .edit-div ,.uparrow-cont:hover .uparrow, .uparrow-cont:hover .uparrow-div{
+.star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div, .history-cont:hover .history, .history-cont:hover .history-div,.message-cont:hover .message, .message-cont:hover .message-div, .video-cont:hover .video , .video-cont:hover .video-div ,.share-cont:hover .share, .profile-cont:hover .profile-div, .undo-cont:hover .undo, .undo-cont:hover .undo-div, .redo-cont:hover .redo , .redo-cont:hover .redo-div , .printer-cont:hover .printer, .printer-cont:hover .printer-div , .spell-cont:hover .spell, .spell-cont:hover .spell-div , .format-cont:hover .format ,.format-cont:hover .format-div, .zoom-cont:hover .zoom, .zoom-cont:hover .zoom-div , .styles-cont:hover .styles , .styles-cont:hover .styles-div , .font-cont:hover .font ,.font-cont:hover .font-div, .dec-cont:hover .dec, .dec-cont:hover .dec-div,.font-inp-cont:hover .font-tool, .inc-cont:hover .inc , .inc-cont:hover .inc-div ,.bold-cont:hover .bold ,.bold-cont:hover .bold-div ,.italic-cont:hover .Italic ,.italic-cont:hover .italic-div, .underline-cont:hover .Underline , .underline-cont:hover .underline-div ,.text-color-cont:hover .text-color, .text-color-cont:hover .text-color-div, .highlighter-cont:hover .highlighter-div ,.highlighter-cont:hover .highlighter, .insert-cont:hover .insert ,.insert-cont:hover .insert-div , .comment-cont:hover .comment , .comment-cont:hover .comment-div ,.picture-cont:hover .picture ,.picture-cont:hover .picture-div ,.align-cont:hover .align, .align-cont:hover .align-div ,.line-space-cont:hover .line-space ,.line-space-cont:hover .line-space-div ,.menu-cont:hover .menu ,.menu-cont:hover .menu-div ,.edit-cont:hover .edit ,.edit-cont:hover .edit-div ,.uparrow-cont:hover .uparrow, .uparrow-cont:hover .uparrow-div ,.list-with-bullet-cont:hover .list-with-bullet ,.list-with-bullet-cont:hover .list-with-bullet-div{
     opacity: 1;
     cursor: pointer;
     visibility: visible;
@@ -716,4 +741,14 @@ input[type="text"].doc-name:hover + .rename {
     opacity: 1;
     cursor: pointer;
 
+}
+
+.show {
+    display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.hide {
+    display: none;
 }
