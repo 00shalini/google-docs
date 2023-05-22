@@ -21,6 +21,15 @@ import bold from "../assets/images/bold-text.png";
 import italic from "../assets/images/italic-font.png";
 import pencil from "../assets/images/pencil.png";
 import minus from '../assets/images/minus-sign.png';
+import highlighter from '../assets/images/highlighter.png';
+import insert from '../assets/images/insert.png';
+import comment from '../assets/images/comment.png';
+import picture from '../assets/images/image.png';
+import align from '../assets/images/align-right.png';
+import linespacing from '../assets/images/line-spacing.png';
+import listwithbullet from '../assets/images/list-with-bullets.png'
+import menu from '../assets/images/menu.png';
+import uparrow from '../assets/images/up-arrow.png';
 
 const DocsUI = () => {
   return (
@@ -213,7 +222,7 @@ const DocsUI = () => {
                 Undo(Ctrl+Z)
               </div>
             </div>
-            <div className="redo-cont w-9">
+            <div className="redo-cont w-9 h-10">
               <img
                 src={redo}
                 alt="redo"
@@ -224,7 +233,7 @@ const DocsUI = () => {
                 Redo(Ctrl+Y)
               </div>
             </div>
-            <div className="printer-cont w-9">
+            <div className="printer-cont w-9 h-10">
               <img
                 src={printer}
                 alt="printer"
@@ -235,7 +244,7 @@ const DocsUI = () => {
                 Print(Ctrl+P)
               </div>
             </div>
-            <div className="spell-cont w-9">
+            <div className="spell-cont w-9 h-10">
               <img
                 src={spellcheck}
                 alt="spellcheck"
@@ -246,7 +255,7 @@ const DocsUI = () => {
                 Spelling and grammer check(Ctrl+Alt+X)
               </div>
             </div>
-            <div className="format-cont w-9">
+            <div className="format-cont w-9 h-10">
               <img
                 src={paintroller}
                 alt="format"
@@ -336,10 +345,252 @@ const DocsUI = () => {
                 Font size
               </div>
             </div>
+            <div className="inc-cont w-6 h-10">
+              <p value="10" className="w-8 inc-txt text-center text-2xl">+</p>
+              <div className="inc-div"></div>
+              <div className="inc  bg-black color w-56 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+              Increase font size(Ctrl+Shift+.)
+              </div>
+            </div>
           </div>
-          <div className="w-24 border-black border h-10"></div>
-          <div className="w-72 border-black border h-10"></div>
-          <div className="w-12 border-black border h-10"></div>
+          <div className="w-48 border-blue-400 border h-10 flex pl-2 pr-2" style={{marginLeft:'-120px'}}>
+              <div className="bold-cont w-9 h-10 border">
+                <img
+                  src={bold}
+                  alt="bold"
+                  className="absolute w-3"
+                  style={{
+                    marginLeft: "12px",
+                    marginTop:'13px'
+                    
+                  }}
+                />
+                <div className="bold-div"></div>
+                <div className="bold  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                  Bold(Ctrl+B)
+                </div>
+            </div>
+            <div className="italic-cont w-9 h-10 border">
+              <img
+                src={italic}
+                alt="italic"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "10px",
+                  marginTop:'13px'
+                  
+                }}
+              />
+              <div className="italic-div"></div>
+              <div className="Italic  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Italic(ctrl+I)
+              </div>
+            </div>
+            <div className="underline-cont w-9 h-10 border">
+              <img
+                src={underline}
+                alt="underline"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "10px",
+                  marginTop:'13px'
+                  
+                }}
+              />
+              <div className="underline-div"></div>
+              <div className="Underline  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Underline(Ctrl+U)
+              </div>
+            </div>
+            <div className="text-color-cont w-9 h-10 border">
+             <p className="text-color-txt mt-2.5 ml-3 font-bold">A</p>
+            <div className="text-color-div"></div>
+            <div className="border-b-4 border-b-black w-5 m-auto" style={{marginTop:'-8px'}}></div>
+              <div className="text-color  bg-black color w-16 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Text color
+              </div>
+            </div>
+            <div className="highlighter-cont w-9 h-10 border">
+              <img
+                src={highlighter}
+                alt="highlighter"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "10px",
+                  marginTop:'13px'
+                  
+                }}
+              />
+              <div className="highlighter-div"></div>
+              <div className="highlighter  bg-black color w-28 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Highlighter color
+              </div>
+            </div>
+          </div>
+          <div className="w-28 border-black border h-10 flex">
+            <div className="insert-cont w-9 h-10 border">
+              <img
+                src={insert}
+                alt="insert"
+                className="absolute w-5"
+                style={{
+                  marginLeft: "8px",
+                  marginTop:'10px'
+                  
+                }}
+              />
+              <div className="insert-div"></div>
+              <div className="insert  bg-black color w-28 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Insert link(Ctrl+K)
+              </div>
+            </div>
+            <div className="comment-cont w-9 h-10 border">
+              <img
+                src={comment}
+                alt="comment"
+                className="absolute w-5"
+                style={{
+                  marginLeft: "8px",
+                  marginTop:'10px'
+                  
+                }}
+              />
+              <div className="comment-div"></div>
+              <div className="comment  bg-black color w-40 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Add comment(Ctrl+Alt+M)
+              </div>
+            </div>
+            <div className="picture-cont w-9 h-10 border">
+              <img
+                src={picture}
+                alt="picture"
+                className="absolute w-5"
+                style={{
+                  marginLeft: "8px",
+                  marginTop:'10px'
+                  
+                }}
+              />
+              <div className="picture-div"></div>
+              <div className="picture  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Insert image
+              </div>
+            </div>
+          </div>
+          <div className="w-60 border-black border h-10 flex">
+            <div className="align-cont w-12 h-10 border">
+              <img
+                src={align}
+                alt="align"
+                className="absolute w-4"
+                style={{
+                  marginLeft: "8px",
+                  marginTop:'11px'
+                  
+                }}
+              />
+              <img
+                src={downarrow}
+                alt="downarrow"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "32px",
+                  marginTop:'15px',
+                  color:'#5c5c5c'
+                }}
+              />
+              <div className="align-div"></div>
+              <div className="align  bg-black color w-20 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Text align
+              </div>
+            </div>
+            <div className="line-space-cont w-9 h-10 border">
+              <img
+                src={linespacing}
+                alt="linespace"
+                className="absolute w-5"
+                style={{
+                  marginLeft: "8px",
+                  marginTop:'10px'
+                  
+                }}
+              />
+              <div className="line-space-div"></div>
+              <div className="line-space  bg-black color w-40 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Line & paragraph spacing
+              </div>
+            </div>
+            <div className="menu-cont w-9 h-10 border">
+              <img
+                src={menu}
+                alt="menu"
+                className="absolute w-5"
+                style={{
+                  marginLeft: "8px",
+                  marginTop:'10px'
+                  
+                }}
+              />
+              <div className="menu-div"></div>
+              <div className="menu  bg-black color w-12 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                More
+              </div>
+            </div>
+            <div className="edit-cont w-16 h-10 border ml-14">
+              <img
+                src={pencil}
+                alt="edit"
+                className="absolute w-4"
+                style={{
+                  marginLeft: "8px",
+                  marginTop:'12px'
+                  
+                }}
+              />
+                <img
+                src={downarrow}
+                alt="downarrow"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "32px",
+                  marginTop:'15px',
+                  color:'#5c5c5c'
+                }}
+              />
+              <div className="edit-div"></div>
+              <div className="edit  bg-black color w-12 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Editing mode
+              </div>
+            </div>
+          </div>
+          <div className="w-12 border-black border h-10">
+            <div className="uparrow-cont w-9 h-10 border">
+              <img
+                src={uparrow}
+                alt="uparrow"
+                className="absolute w-3"
+                style={{
+                  marginLeft: "10px",
+                  marginTop:'13px'
+                  
+                }}
+              />
+              <div className="uparrow-div"></div>
+              <div className="uparrow  bg-black color w-44 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid">
+                Hide the menus(Ctrl+Shift+F)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full border-black border flex pl-7 pt-6">
+        <div className="list-with-bullet-cont h-10 w-5 border-black border">
+          <img src={listwithbullet} alt="list with bullet" className="w-5"/>
+          <div className="list-with-bullet-div"></div>
+          <div className="list-with-bullet bg-black color w-44 h-6 text-slate-100 mt-2 pt-0.5 pb-0.5 pl-1.5 pr-1.5 text-xs rounded place-items-center grid"></div>
+        </div>
+        <div className="w-8/12 border-black border ml-44" style={{height:"600px"}}>
+           <input type="textarea" className="w-full h-7"/>
         </div>
       </div>
     </div>
