@@ -2,7 +2,6 @@
     width: 100%;
     top: 0;
     left: 0;
-    border: 1px solid black;
     min-height: 70px;
 
 }
@@ -73,7 +72,7 @@ body {
     align-items: center;
     border-radius: 50%;
      opacity: 0;
-     margin-top: 12px;
+     margin-top: 13px;
      visibility:hidden;
    margin-left: -9px;
 }
@@ -84,9 +83,9 @@ body {
     align-items: center;
     border-radius: 50%;
      opacity: 0;
-     margin-top: 13px;
+     margin-top: 14px;
      visibility:hidden;
-   margin-left: 13px;
+   margin-left: 12px;
 }
 .video-div {
     background-color:  #e2e4e5;
@@ -326,9 +325,9 @@ body {
 }
 .edit-div {
     background-color:  #e2e4e5;
-    width: 34px;
-    height: 28px;
-    border-radius:5px;
+    width: 54px;
+    height: 30px;
+    border-radius:20px;
     margin-top:5px;
     opacity: 0;
     visibility: hidden;
@@ -354,7 +353,7 @@ body {
 }
 
 .font-inp {
-    margin-top: 9px;
+    margin-top: 6px;
     color: rgb(92, 92, 92);
     font-family: Google Sans,Roboto,sans-serif!important;
     font-variant-ligatures: no-contextual;
@@ -510,7 +509,7 @@ body {
 }
 
 .inc-txt {
-    margin-top: 4px;
+    margin-top: 3px;
     margin-left: -3px;
     color: rgb(92, 92, 92);
     font-family: Google Sans,Roboto,sans-serif!important;
@@ -625,41 +624,55 @@ body {
 .star-cont , .send-cont, .check-cont, .history-cont, .message-cont, .video-cont,.share-cont, .profile-cont, .undo-cont, .redo-cont, .printer-cont, .spell-cont, .format-cont{
     position: relative;
   display: inline-block;
-  border:1px solid black;
   cursor: pointer;
 }
 .zoom-cont, .styles-cont, .dec-cont  {
     cursor: pointer;
-    border:1px solid black;
+    cursor: pointer;
+
 }
 .zoom-cont {
         margin-left: 180px;
         margin-top: -63.5px;
+        cursor: pointer;
+
 }
 .font-cont {
     margin-left: -113px;
-       
-    border: 1px solid blue;
+    cursor: pointer;
 }
 .font-inp-cont {
     margin-top: -40px;
     margin-left: -66px;
-    border: 1px solid black;
+    cursor: pointer;
+
 }
 .dec-cont {
     margin-left: -95px;
-    border: 1px solid blue;
+    cursor: pointer;
+
 }
 .inc-cont {
-    border: 1px solid black;
-    margin-top: -41px;
+    margin-top: -50px;
     margin-left: -30px;
+    cursor: pointer;
+
 }
 .div-hover:hover {
     background-color:#e2e4e5 ;
+    cursor: pointer;
+
+}
+.inp:hover {
+    box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -1px 5px 0px rgba(0,0,0,0.75);
+cursor: pointer;
+
 }
 .bold-cont,.italic-cont,.underline-cont,.text-color-cont, .highlighter-cont, .insert-cont ,.comment-cont ,.picture-cont ,.align-cont ,.line-space-cont, .menu-cont, .edit-cont ,.uparrow-cont{
-    border: 1px solid black;
+    cursor: pointer;
+
 }
 .star-cont:hover .star, .star-cont:hover .star-div, .send-cont:hover .send, .send-cont:hover .send-div,.check-cont:hover .check, .check-cont:hover .check-div, .history-cont:hover .history, .history-cont:hover .history-div,.message-cont:hover .message, .message-cont:hover .message-div, .video-cont:hover .video , .video-cont:hover .video-div ,.share-cont:hover .share, .profile-cont:hover .profile-div, .undo-cont:hover .undo, .undo-cont:hover .undo-div, .redo-cont:hover .redo , .redo-cont:hover .redo-div , .printer-cont:hover .printer, .printer-cont:hover .printer-div , .spell-cont:hover .spell, .spell-cont:hover .spell-div , .format-cont:hover .format ,.format-cont:hover .format-div, .zoom-cont:hover .zoom, .zoom-cont:hover .zoom-div , .styles-cont:hover .styles , .styles-cont:hover .styles-div , .font-cont:hover .font ,.font-cont:hover .font-div, .dec-cont:hover .dec, .dec-cont:hover .dec-div,.font-inp-cont:hover .font-tool, .inc-cont:hover .inc , .inc-cont:hover .inc-div ,.bold-cont:hover .bold ,.bold-cont:hover .bold-div ,.italic-cont:hover .Italic ,.italic-cont:hover .italic-div, .underline-cont:hover .Underline , .underline-cont:hover .underline-div ,.text-color-cont:hover .text-color, .text-color-cont:hover .text-color-div, .highlighter-cont:hover .highlighter-div ,.highlighter-cont:hover .highlighter, .insert-cont:hover .insert ,.insert-cont:hover .insert-div , .comment-cont:hover .comment , .comment-cont:hover .comment-div ,.picture-cont:hover .picture ,.picture-cont:hover .picture-div ,.align-cont:hover .align, .align-cont:hover .align-div ,.line-space-cont:hover .line-space ,.line-space-cont:hover .line-space-div ,.menu-cont:hover .menu ,.menu-cont:hover .menu-div ,.edit-cont:hover .edit ,.edit-cont:hover .edit-div ,.uparrow-cont:hover .uparrow, .uparrow-cont:hover .uparrow-div ,.list-with-bullet-cont:hover .list-with-bullet ,.list-with-bullet-cont:hover .list-with-bullet-div{
     opacity: 1;
@@ -670,6 +683,8 @@ body {
     opacity: 1;
     cursor: pointer;
     visibility: visible;
+    cursor: pointer;
+
 }
 .share-cont:hover .share-div {
     
@@ -748,6 +763,9 @@ input[type="text"].doc-name:hover + .rename {
   position: absolute;
   top: 100%;
   left: 0;
+  box-shadow: -2px 1px 5px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px 1px 5px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 1px 5px 1px rgba(0,0,0,0.75);
 }
 .hide {
     display: none;
